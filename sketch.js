@@ -266,7 +266,6 @@ class SortCraftEngine {
             this.sortedIndices.add(i);
         }
 
-        // Record visualization run for user profile
         if (window.authManager) {
             window.authManager.recordVisualizationRun();
         }

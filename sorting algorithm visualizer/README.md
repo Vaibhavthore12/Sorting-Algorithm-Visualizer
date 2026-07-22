@@ -1,44 +1,53 @@
-# Sorting Visualizer
+# 📊 SortCraft — Interactive Sorting Algorithm Visualizer & Telemetry Engine
 
-![Project Image](https://github.com/shubh67678/sorting-visualizer/blob/master/image/gif.gif)
-> [Live demo](https://shubh67678.github.io/sorting-visualizer/)
-
----
-
-## Description
-
-This project helps one to visualize a sorting algorithm. Each element of the array is displayed as a bar. The operations are colour coded such that: 
-
-1. Red - Swap
-2. Blue - Comparison 
-3. Green - Element is in sorted position
-
-It compares the time taken by the different algorithm for sorting the array.
-
-
-
-### Technologies
-
-- HTML 
-- CSS
-- Javascript (p5.js)
+**SortCraft PRO v2.0** is an interactive, high-performance web application designed to visualize sorting algorithms in real-time with neon glassmorphism aesthetics, live telemetry tracking, Web Audio sound synthesis, array pattern presets, Light & Dark modes, User Authentication, and step-by-step educational analysis.
 
 ---
 
+## ✨ Features
 
-## References
-
-Inspiration taken from [coding train](https://www.youtube.com/watch?v=67k3I2GxTH8).
-
-Useful links discribing the algorithms used 
-
-- [Bubble Sort](https://en.wikipedia.org/wiki/Bubble_sort)
-- [Selection Sort](https://en.wikipedia.org/wiki/Selection_sort)
-- [Merge Sort](https://en.wikipedia.org/wiki/Merge_sort)
-- [Quick Sort](https://en.wikipedia.org/wiki/Quicksort)
-
-
-[Back To The Top](#read-me-template)
+- 🌌 **Glassmorphism & Neon Design System**: Built with modern dark themes, blur cards, glowing drop-shadow indicators, and vibrant visual feedback.
+- ☀️ **Light / Dark Mode**: Seamless toggle between crisp Light Mode and Obsidian Dark Mode.
+- 🔑 **Authentication & User Profiles**: Sign In & Sign Up modal, user avatar profile menu, visualization count tracking, and local storage persistence.
+- 🎨 **Multi-Theme Engine**:
+  - 🌌 **Cyberpunk Neon** (Cyan & Pink glow)
+  - 🌅 **Synthwave Sunset** (Purple & Crimson glow)
+  - 🌿 **Emerald Matrix** (Lime & Emerald glow)
+  - ✨ **Obsidian Gold** (Gold & Dark Slate glow)
+- 📊 **Real-Time Telemetry HUD**:
+  - 🔍 **Comparisons Counter**
+  - 🔄 **Swaps & Overwrites Counter**
+  - ⚡ **Array Accesses Counter**
+  - ⏱️ **Microsecond Execution Time**
+- 🔊 **Web Audio API Sound Synthesizer**: Audio pitch tones mapped dynamically to element heights during sorting.
+- ⚙️ **Interactive Controls**:
+  - Play / Pause / Resume
+  - Step Forward execution
+  - Array Size slider (10 to 120 elements)
+  - Speed slider (1x to 100x multiplier)
+  - Array Distribution presets: *Random*, *Reversed (Worst Case)*, *Nearly Sorted*, *Few Unique*, *Mountain Peak*
+- 📚 **Algorithm Insight & Pseudocode Panel**:
+  - Best, Average, Worst Time Complexities ($\mathcal{O}(n)$, $\mathcal{O}(n \log n)$, $\mathcal{O}(n^2)$)
+  - Space Complexity & Stability Rating
+  - Dynamic Pseudocode Reference panel
+  - Real-time step commentary terminal
 
 ---
 
+## ⚡ Supported Algorithms
+
+1. **Bubble Sort** (Comparison Exchange)
+2. **Selection Sort** (In-place Min Selection)
+3. **Insertion Sort** (Adaptive Online Insertion)
+4. **Quick Sort (Lomuto)** (Divide & Conquer Partition)
+5. **Merge Sort** (Divide & Conquer Merge)
+6. **Heap Sort** (Max Heap Tree Extraction)
+7. **Shell Sort** (Gap Interval Insertion)
+8. **Cocktail Shaker Sort** (Bidirectional Bubble Sort)
+9. **Radix Sort (LSD)** (Non-comparative Digit Bucket Sort)
+
+---
+
+## 🚀 How to Run
+
+Simply open `index.html` in any modern Web Browser (Google Chrome, Microsoft Edge, Firefox, Safari).

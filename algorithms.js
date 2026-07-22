@@ -186,13 +186,6 @@ const ALGO_METADATA = {
     }
 };
 
-// Generators yield step objects:
-// { type: 'compare', indices: [a, b], msg: '...' }
-// { type: 'swap', indices: [a, b], msg: '...' }
-// { type: 'overwrite', index: a, value: val, msg: '...' }
-// { type: 'pivot', index: p, msg: '...' }
-// { type: 'markSorted', indices: [a, b, ...], msg: '...' }
-
 function* bubbleSortGen(arr) {
     let n = arr.length;
     let swapped;
@@ -223,7 +216,6 @@ function* bubbleSortGen(arr) {
         };
         if (!swapped) break;
     }
-    // Mark remaining sorted
     let allIndices = Array.from({ length: n }, (_, k) => k);
     yield { type: 'markSorted', indices: allIndices, msg: 'Sorting complete!' };
 }
@@ -383,11 +375,9 @@ function* _mergeGen(arr, l, m, r) {
 
 function* heapSortGen(arr) {
     let n = arr.length;
-    // Build heap
     for (let i = Math.floor(n / 2) - 1; i >= 0; i--) {
         yield* _heapifyGen(arr, n, i);
     }
-    // Extract elements
     for (let i = n - 1; i > 0; i--) {
         let temp = arr[0];
         arr[0] = arr[i];
@@ -456,7 +446,6 @@ function* cocktailSortGen(arr) {
 
     while (swapped) {
         swapped = false;
-        // Forward pass
         for (let i = start; i < end; i++) {
             yield { type: 'compare', indices: [i, i + 1], msg: `Cocktail Forward: Comparing index ${i} and ${i + 1}` };
             if (arr[i] > arr[i + 1]) {
@@ -472,7 +461,6 @@ function* cocktailSortGen(arr) {
         end--;
         swapped = false;
 
-        // Backward pass
         for (let i = end - 1; i >= start; i--) {
             yield { type: 'compare', indices: [i, i + 1], msg: `Cocktail Backward: Comparing index ${i} and ${i + 1}` };
             if (arr[i] > arr[i + 1]) {
